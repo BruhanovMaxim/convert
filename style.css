@@ -1,0 +1,114 @@
+.container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    grid-template-columns: minmax(150px, auto);
+    grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "footer footer";
+    gap: 10px;
+}
+.header{
+    grid-area: header;
+    border: 1px solid #999;
+    padding: 50px;
+    background: rgb(255, 145, 0);
+}
+.sidebar{
+grid-area: sidebar;
+border: 1px solid #999;
+padding: 50px;
+background:yellowgreen;
+}
+.content{
+grid-area: content;
+}
+.footer{
+grid-area: footer;
+border: 1px solid #999;
+padding: 10px;
+background:rgb(0, 153, 255);
+}
+
+.cards-grid {
+    display: grid;
+    width: auto;
+    gap: 20px;
+    /*отступы по 20рх между элементами*/
+    grid-template-columns: repeat(4, minmax(200px, auto));
+    /*создаем 4 колонки по 260px*/
+    grid-template-rows: repeat(4, 180px);
+    /*создаем 4 ряда по 180px*/
+    grid-auto-rows: minmax(190px, 380px);
+    grid-template-areas: 
+        "wide1 wide1 product1 product2"
+        "wide2 wide2 product1 product2"
+        "product3 product4 wide3 wide3"
+        "product3 product4 wide4 wide4";
+}
+
+@media (max-width: 1149px){
+
+            .container {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+            }
+
+    .cards-grid{
+        grid-template-columns: repeat(2, minmax(180px, auto));
+        grid-template-rows: repeat(8, 180px);
+        grid-auto-rows: minmax(190px, 380px);
+        grid-template-areas:
+            "wide1 wide1"
+            "wide2 wide2"
+            "product1 product2"
+            "product1 product2"
+            "wide3 wide3"
+            "wide4 wide4"
+            "product3 product4"
+            "product3 product4";
+    }
+}
+
+@media (max-width: 639px) {
+        .container {
+            grid-template-areas:
+                "header"
+                "sidebar"
+                "content"
+                "footer";
+        }
+    .cards-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 140px);
+        grid-auto-rows: minmax(190px, 380px);
+        grid-template-areas:
+            "wide1"
+            "wide2"
+            "product1"
+            "product1"
+            "product2"
+            "product2"
+            "wide3"
+            "wide4"
+            "product3"
+            "product3"
+            "product4"
+            "product4";
+    }
+}
+
+.sale-1 {grid-area: wide1;}
+.sale-2 {grid-area: wide2;}
+.sale-3 {grid-area: wide3;}
+.sale-4 {grid-area: wide4;}
+.product-1 {grid-area: product1;}
+.product-2 {grid-area: product2;}
+.product-3 {grid-area: product3;}
+.product-4 {grid-area: product4;}

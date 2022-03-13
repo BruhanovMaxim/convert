@@ -1,0 +1,18 @@
+* {padding: 0px;margin: 0px;border: none;}
+*,*::before,*::after {box-sizing: border-box;}
+
+body{
+    font-size: 15px;
+    line-height: 1;
+    background-color: antiquewhite;
+    overscroll-behavior: none;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.card-demo{
+    background: rgb(221, 170, 170);
+    border-radius: 8px;
+    text-align: center;
+}
