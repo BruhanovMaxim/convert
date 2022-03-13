@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     height: auto;
-    border: 1px solid red;
+   /*border: 1px solid red; */
     grid-template-columns: minmax(150px, auto);
     grid-template-areas: 
     "header header"
